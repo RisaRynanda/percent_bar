@@ -14,54 +14,57 @@ class IndicatorBar extends StatelessWidget {
         children: [
           Container(
             padding: EdgeInsets.all(15.0),
-            child: ListView(
-              shrinkWrap: true,
+            child: Wrap(
               children: [
                 Row(
                   children: [
                     CircularPercentIndicator(
-                      radius: 60.0,
+                      radius: 70.0,
                       lineWidth: 13.0,
                       startAngle: 100.0,
                       animation: true,
                       percent: (31 / 31),
                       animationDuration: 1000,
                       center: Text(
-                        "21 Days",
+                        "21 Days Of 30 Days",
                         style: TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 20.0),
                       ),
-                      footer: Text(
-                        "wkwkkk",
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold, fontSize: 17.0),
-                      ),
                       circularStrokeCap: CircularStrokeCap.round,
-                      progressColor: Colors.purple,
+                      progressColor: Colors.blue,
                     ),
                     Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
                     CircularPercentIndicator(
                       radius: 20.0,
                       lineWidth: 4.0,
                       percent: 0.30,
-                      center: new Text("30%"),
-                      progressColor: Colors.orange,
+                      animation: true,
+                      animationDuration: 1000,
+                      center: Text("30%"),
+                      progressColor: Colors.green,
+                      footer: Text("Present"),
                     ),
-                    Padding(padding: EdgeInsets.symmetric(horizontal: 1.0)),
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
+                    CircularPercentIndicator(
+                      radius: 20.0,
+                      lineWidth: 4.0,
+                      animation: true,
+                      animationDuration: 1000,
+                      percent: 0.30,
+                      center: Text("30%"),
+                      progressColor: Colors.yellow,
+                      footer: Text("Late"),
+                    ),
+                    Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
                     CircularPercentIndicator(
                       radius: 20.0,
                       lineWidth: 4.0,
                       percent: 0.30,
-                      center: new Text("30%"),
+                      animation: true,
+                      animationDuration: 1000,
+                      center: Text("30%"),
                       progressColor: Colors.red,
-                    ),
-                    Padding(padding: EdgeInsets.symmetric(horizontal: 10.0)),
-                    CircularPercentIndicator(
-                      radius: 20.0,
-                      lineWidth: 4.0,
-                      percent: 0.30,
-                      center: new Text("30%"),
-                      progressColor: Colors.black,
+                      footer: Text("Absent"),
                     ),
                   ],
                 ),
